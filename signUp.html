@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="shortcut icon" href="images/route.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Pacifico&family=Russo+One&family=Ysabeau+SC:wght@700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg position-fixed start-0 end-0">
+        <div class="container">
+            <p class="navbar-brand">Route</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto fs-5 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="index.html">Login</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="signUp.html">Register</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="vh-100 container">
+
+        <div class="col-12 signUp p-5 pb-2 position-absolute">
+            <h1 class="text-center mb-4">Sign Up</h1>
+            <form action="">
+
+                <div class="float position-relative">
+                    <input type="text" class="w-100" id="userName" required>
+                    <!-- lazm required w el input for el label-->
+                    <label id="userNameLabel">Username</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="float position-relative">
+                    <input type="text" class="w-100" id="userEmail" required>
+                    <label id="emailLabel">Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="float position-relative">
+                    <input type="password" class="w-100" id="userPassword" required>
+                    <label id="passwordLabel">Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <button id="signUp" type="button" class="w-100 btn">Sign Up</button>
+
+            </form>
+
+            <p class="text-white pb-1 pt-3 text-center">Already have an account? <a href="index.html">Login</a>
+            </p>
+
+            <div class="warning fw-bold text-center d-flex align-items-center justify-content-center invisible">
+                <i class="fa-solid fa-circle-exclamation position-relative"></i>
+                <p>This email has been used before</p>
+            </div>
+        </div>
+
+        <div id="signUpLayer" class="position-absolute top-0 start-0 bottom-0 end-0 bg-white bg-opacity-25 d-none ">
+            <div class="position-absolute shadow-lg layer">
+                <p class="fs-1">
+                    You have successfully signed up ... (<span class="fw-bold fs-1" id="redirectCounter">4</span>)
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signUp.js"></script>
+</body>
+
+</html>
