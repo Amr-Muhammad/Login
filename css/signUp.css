@@ -4,7 +4,7 @@
 }
 
 .bgImg{
-    background: url(../images/neon1.jpg);
+    background: url(../images/bg.jpg);
     background-position: center,center;
     background-size: cover;
     animation: animateBg linear 4s infinite;

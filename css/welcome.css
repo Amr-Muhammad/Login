@@ -1,8 +1,8 @@
 .img {
-    background: url(../images/giphy.gif);
-    /* background-image: url(../images/bg.jpg); */
+    /* background: url(../images/giphy.gif); */
+    background: url(../images/bg.jpg),no-repeat;
     background-position: center, center;
-    background-size: contain;
+    background-size: cover;
 }
 
 
