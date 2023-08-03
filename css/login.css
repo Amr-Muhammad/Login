@@ -10,6 +10,10 @@
     animation: showUp 1.5s ease forwards;
 }
 
+.bgImg{
+    background-image: url(../images/bg.jpg);
+}
+
 @keyframes showUp {
     0% {
         opacity: 0;
