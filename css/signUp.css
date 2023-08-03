@@ -1,32 +1,21 @@
 :root {
     --grayColor: rgb(193, 192, 192);
-    /* --mainColor: #00152b; */
     --mainColor: rgb(0, 21, 43);
 }
 
-/* section {
-    background-position: center;
-    background: url(../images/neon1.jpg);
-    background-size: cover;
-    animation: animateBg linear 4s infinite;
-} */
-
 .bgImg{
-    background-position: center;
-    background: url(../images/neon1.jpg);
+    background: url(../images/bg.jpg);
+    background-position: center,center;
     background-size: cover;
     animation: animateBg linear 4s infinite;
     position: absolute;
     top: 0; z-index: -1;
-    width: 100%;
-    height: 100%;
-    
+    width: 100%;    
 }
 
 @keyframes animateBg {
     100% {
         filter: hue-rotate(360deg);
-
     }
 }
 
@@ -34,7 +23,7 @@
     /* font-family: 'Lumanosimo', cursive; */
     font-family: 'Russo One', sans-serif;
     letter-spacing: 3px;
-    /* color: var(--mainColor); */
+    color: var(--mainColor);
     font-size: 40px;
     font-weight: bold;
     pointer-events: none;
@@ -99,8 +88,8 @@ h1 {
 }
 
 .redColor {
-    /* color: rgb(195, 0, 0); */
-    color: black;
+    color: rgb(195, 0, 0);
+    /* color: black; */
 }
 
 input {
@@ -141,18 +130,13 @@ input:valid~label {
     margin-bottom: 40px;
 }
 
-/* #signUp {
-    background-color: white;
-    color: black;
-} */
-
-/* .warning i {
+.warning i {
     color: rgb(195, 0, 0);
 }
 
 .warning p {
     color: rgb(195, 0, 0);
-} */
+}
 
 a {
     text-decoration: none;
@@ -183,6 +167,10 @@ a:hover {
     animation: Fade 1s ease forwards;
 }
 
+.layer2{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
 @keyframes Fade {
     0% {
         opacity: 0;
@@ -194,14 +182,26 @@ a:hover {
 
 }
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1500px) {
+    .signUp {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .signUp {
         width: 40%;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
     .signUp {
-        width: 100%;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .signUp {
+        width: 80%;
     }
 }

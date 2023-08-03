@@ -1,10 +1,8 @@
 .img {
-    background-position: center, center;
     /* background-image: url(../images/giphy.gif); */
-    background-image: url(../images/neon1.jpg);
-    background-position: center;
-    background-size:cover;
-    /* animation: animateBg 4s linear infinite ; */
+    background-image: url(../images/bg.jpg);
+    background-position: center, center;
+    background-size: cover;
 }
 
 
@@ -22,12 +20,6 @@
     color: white;
 }
 
-@keyframes animateBg {
-    100%{
-        filter: hue-rotate(360deg);
-    }
-}
-
 .navbar-brand {
     font-family: 'Lumanosimo', cursive;
 }
@@ -35,11 +27,12 @@
 #logout a {
     cursor: pointer;
 }
-.navbar-brand{
+
+.navbar-brand {
     /* font-family: 'Lumanosimo', cursive; */
     font-family: 'Russo One', sans-serif;
     letter-spacing: 3px;
-    color: var(--mainColor);
+    /* color: var(--mainColor); */
     font-size: 40px;
     font-weight: bold;
     pointer-events: none;

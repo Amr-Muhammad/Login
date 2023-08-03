@@ -121,7 +121,7 @@ function signUpBtn() {
 }
 
 function checkUserName() {
-    let userNameRegex = /^[a-zA-Z_]{3,10}$/
+    let userNameRegex = /^[a-zA-Z_]{3,15}$/
     return userNameRegex.test(userName.value)
 }
 

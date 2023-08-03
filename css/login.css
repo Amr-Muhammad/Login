@@ -23,12 +23,14 @@
     }
 }
 
+
+
 /* #logInBtn{
     background-color: var(--mainColor);
     color: white;
 } */
 
-.navbar-brand{
+.navbar-brand {
     /* font-family: 'Lumanosimo', cursive; */
     font-family: 'Russo One', sans-serif;
     letter-spacing: 3px;
@@ -38,13 +40,27 @@
     pointer-events: none;
 }
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1500px) {
+    .login {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .login {
         width: 40%;
     }
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 1000px) {
     .login {
-        width: 100%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .login {
+        width: 80%;
     }
 }
