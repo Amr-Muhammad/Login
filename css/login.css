@@ -5,6 +5,10 @@
     top: 50%;
     transform: translate(50%, -50%);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(30px);
+    -moz-backdrop-filter: blur(30px);
+    -o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
     border-radius: 20px;
     border: 2px solid var(--grayColor);
     animation: showUp 1.5s ease forwards;
