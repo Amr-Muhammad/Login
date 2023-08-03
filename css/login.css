@@ -23,16 +23,16 @@
     }
 }
 
-#logInBtn{
+/* #logInBtn{
     background-color: var(--mainColor);
     color: white;
-}
+} */
 
 .navbar-brand{
     /* font-family: 'Lumanosimo', cursive; */
     font-family: 'Russo One', sans-serif;
     letter-spacing: 3px;
-    color: var(--mainColor);
+    /* color: var(--mainColor); */
     font-size: 40px;
     font-weight: bold;
     pointer-events: none;
@@ -45,6 +45,6 @@
 }
 @media screen and (max-width: 500px) {
     .login {
-        width: 50%;
+        width: 100%;
     }
 }

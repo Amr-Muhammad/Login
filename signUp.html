@@ -16,82 +16,89 @@
 </head>
 
 <body>
+    <section>
+        <nav class="navbar navbar-expand-lg position-fixed start-0 end-0">
+            <div class="container">
+                <p class="navbar-brand text-white">Route</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-end ms-auto fs-5 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="index.html">Login</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="signUp.html">Registar</a>
+                        </li>
 
-    <nav class="navbar navbar-expand-lg position-fixed start-0 end-0">
-        <div class="container">
-            <p class="navbar-brand">Route</p>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto fs-5 mb-lg-0">
-                    <li class="nav-item me-3">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link text-white" href="index.html">Login</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link text-white" href="signUp.html">Register</a>
-                    </li>
+                    </ul>
 
-                </ul>
-
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="vh-100 container">
+        <div class="vh-100 container">
 
-        <div class="col-12 signUp p-5 pb-2 position-absolute">
-            <h1 class="text-center mb-4">Sign Up</h1>
-            <form action="">
+            <div class="col-12 signUp p-5 pb-2 position-absolute">
+                <h1 class="text-center mb-4 text-white ">Sign Up</h1>
+                <form action="">
 
-                <div class="float position-relative">
-                    <input type="text" class="w-100" id="userName" required>
-                    <!-- lazm required w el input for el label-->
-                    <label id="userNameLabel">Username</label>
-                    <i class="fa-solid fa-user"></i>
-                </div>
+                    <div class="float position-relative">
+                        <input type="text" class="w-100" id="userName" required>
+                        <!-- lazm required w el input for el label-->
+                        <label id="userNameLabel">Username</label>
+                        <i class="fa-solid fa-user text-white"></i>
+                    </div>
 
-                <div class="float position-relative">
-                    <input type="text" class="w-100" id="userEmail" required>
-                    <label id="emailLabel">Email</label>
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
+                    <div class="float position-relative">
+                        <input type="text" class="w-100" id="userEmail" required>
+                        <label id="emailLabel">Email</label>
+                        <i class="fa-solid fa-envelope text-white"></i>
+                    </div>
 
-                <div class="float position-relative">
-                    <input type="password" class="w-100" id="userPassword" required>
-                    <label id="passwordLabel">Password</label>
-                    <i class="fa-solid fa-lock"></i>
-                </div>
+                    <div class="float position-relative">
+                        <input type="password" class="w-100" id="userPassword" required>
+                        <label id="passwordLabel">Password</label>
+                        <i class="fa-solid fa-lock text-white"></i>
+                    </div>
 
-                <button id="signUp" type="button" class="w-100 btn">Sign Up</button>
+                    <button id="signUp" type="button" class="w-100 btn rounded-5 bg-white text-black fw-bold">Sign
+                        Up</button>
 
-            </form>
+                </form>
 
-            <p class="text-white pb-1 pt-3 text-center">Already have an account? <a href="index.html">Login</a>
-            </p>
-
-            <div class="warning fw-bold text-center d-flex align-items-center justify-content-center invisible">
-                <i class="fa-solid fa-circle-exclamation position-relative"></i>
-                <p>This email has been used before</p>
-            </div>
-        </div>
-
-        <div id="signUpLayer" class="position-absolute top-0 start-0 bottom-0 end-0 bg-white bg-opacity-25 d-none ">
-            <div class="position-absolute shadow-lg layer">
-                <p class="fs-1">
-                    You have successfully signed up ... (<span class="fw-bold fs-1" id="redirectCounter">4</span>)
+                <p class="text-white pb-1 pt-3 text-center">Already have an account? <a href="index.html"
+                        class="text-black">Login</a>
                 </p>
+
+                <div
+                    class="warning text-black fw-bold text-center d-flex align-items-center justify-content-center invisible">
+                    <i class="fa-solid fa-circle-exclamation position-relative text-black"></i>
+                    <p>This email has been used before</p>
+                </div>
             </div>
+
+            <div id="signUpLayer" class="position-absolute top-0 start-0 bottom-0 end-0 bg-white bg-opacity-25 d-none ">
+                <div class="position-absolute shadow-lg layer">
+                    <p class="fs-1">
+                        You have successfully signed up ... (<span class="fw-bold fs-1" id="redirectCounter">4</span>)
+                    </p>
+                </div>
+            </div>
+
         </div>
 
-    </div>
+        <div class="bgImg">
 
+        </div>
 
+    </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/signUp.js"></script>

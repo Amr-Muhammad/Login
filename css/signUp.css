@@ -1,22 +1,40 @@
 :root {
     --grayColor: rgb(193, 192, 192);
-    --mainColor: #00152b;
+    /* --mainColor: #00152b; */
+    --mainColor: rgb(0, 21, 43);
 }
 
-/* .blueColor {
-    color: var(--mainColor);
+/* section {
+    background-position: center;
+    background: url(../images/neon1.jpg);
+    background-size: cover;
+    animation: animateBg linear 4s infinite;
 } */
 
-body {
-    background-image: url(../images/4.jpg);
-    background-position: top, center;
+.bgImg{
+    background-position: center;
+    background: url(../images/neon1.jpg);
     background-size: cover;
+    animation: animateBg linear 4s infinite;
+    position: absolute;
+    top: 0; z-index: -1;
+    width: 100%;
+    height: 100%;
+    
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+
+    }
 }
 
 .navbar-brand {
     /* font-family: 'Lumanosimo', cursive; */
     font-family: 'Russo One', sans-serif;
     letter-spacing: 3px;
+    /* color: var(--mainColor); */
     font-size: 40px;
     font-weight: bold;
     pointer-events: none;
@@ -32,16 +50,25 @@ body {
 }
 
 .navbar button {
-    background-color: var(--mainColor);
+    /* background-color: var(--mainColor); */
+    color: white;
 }
+
 
 .signUp {
     box-shadow: 0px 0px 60px rgb(20, 20, 20);
+    /* box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe; */
     width: 25%;
     left: 100%;
     top: 50%;
+    background: transparent;
     transform: translate(-50%, -50%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     border-radius: 20px;
     border: 2px solid var(--grayColor);
     animation: showUp 1.5s ease forwards;
@@ -51,6 +78,7 @@ body {
     0% {
         opacity: 0;
         left: 80%;
+
     }
 
     100% {
@@ -62,7 +90,7 @@ body {
 
 
 h1 {
-    color: var(--mainColor);
+    /* color: var(--mainColor); */
     font-size: 30px;
     /* font-family: 'Playfair Display', serif; */
     /* font-family: 'Source Sans 3', sans-serif; */
@@ -71,7 +99,8 @@ h1 {
 }
 
 .redColor {
-    color: rgb(195, 0, 0);
+    /* color: rgb(195, 0, 0); */
+    color: black;
 }
 
 input {
@@ -81,7 +110,7 @@ input {
     padding: 6px 0px;
     outline: none;
     border: none;
-    border-bottom: 2px var(--mainColor) solid;
+    border-bottom: 2px white solid;
     color: white;
 }
 
@@ -112,21 +141,20 @@ input:valid~label {
     margin-bottom: 40px;
 }
 
-#signUp {
-    background-color: var(--mainColor);
-    color: white;
-}
+/* #signUp {
+    background-color: white;
+    color: black;
+} */
 
-.warning i {
+/* .warning i {
     color: rgb(195, 0, 0);
 }
 
 .warning p {
     color: rgb(195, 0, 0);
-}
+} */
 
 a {
-    color: var(--mainColor);
     text-decoration: none;
     font-weight: bold;
 }
@@ -174,6 +202,6 @@ a:hover {
 
 @media screen and (max-width: 500px) {
     .signUp {
-        width: 50%;
+        width: 100%;
     }
 }
