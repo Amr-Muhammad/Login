@@ -1,4 +1,4 @@
-if (localStorage.getItem("currentUser")!=null) {
+if (localStorage.getItem("currentUser") != null) {
     window.location.replace("welcome.html")
 }
 
@@ -50,6 +50,74 @@ userPassword.addEventListener("keyup", () => {
     }
 })
 
+
+document.addEventListener("keyup", () => {
+    if (e.key == "Enter") {
+        if (userName.value == "" && userEmail.value != "" && userPassword.value != "") {
+            userNameLabel.classList.add("redColor", "fw-bold")
+        }
+        else if (userName.value != "" && userEmail.value == "" && userPassword.value != "") {
+            emailLabel.classList.add("redColor", "fw-bold")
+        }
+        else if (userName.value != "" && userEmail.value != "" && userPassword.value == "") {
+            passwordLabel.classList.add("redColor", "fw-bold")
+        }
+        else if (userName.value == "" && userEmail.value == "" && userPassword.value != "") {
+            userNameLabel.classList.add("redColor", "fw-bold")
+            emailLabel.classList.add("redColor", "fw-bold")
+        }
+        else if (userName.value == "" && userEmail.value != "" && userPassword.value == "") {
+            userNameLabel.classList.add("redColor", "fw-bold")
+            passwordLabel.classList.add("redColor", "fw-bold")
+        }
+        else if (userName.value != "" && userEmail.value == "" && userPassword.value == "") {
+            emailLabel.classList.add("redColor", "fw-bold")
+            passwordLabel.classList.add("redColor", "fw-bold")
+        }
+
+        else if (userName.value == "" && userEmail.value == "" && userPassword.value == "") {
+            userNameLabel.classList.add("redColor", "fw-bold")
+            emailLabel.classList.add("redColor", "fw-bold")
+            passwordLabel.classList.add("redColor", "fw-bold")
+        }
+
+        else {
+            if (checkUserName() == true && checkEmail() == true && checkPassword() == true) {
+                let userObj = {
+                    userName: userName.value,
+                    userEmail: userEmail.value,
+                    userPassword: userPassword.value,
+                }
+                let ifFound = usersArr.find((el) => (el.userEmail == userEmail.value))
+
+                if (ifFound == undefined) {
+                    emailWarning.classList.replace("visible", "invisible")
+                    usersArr.push(userObj);
+                    localStorage.setItem("user", JSON.stringify(usersArr));
+                    signUpLayer.classList.replace("d-none", "d-block")
+                    let redirectCounterSpan = document.getElementById("redirectCounter")
+                    let i = 4
+                    spanCounter(i)
+                    function spanCounter(i) {
+                        setInterval(() => {
+                            redirectCounterSpan.innerHTML = i
+                            if (i == 0) {
+                                clearInterval(spanCounter(i))
+                                console.log(i);
+                                window.location.replace("index.html")
+                            }
+                            i--
+                        }, 1000);
+                    }
+                }
+                else {
+                    emailWarning.classList.replace("invisible", "visible")
+                    emailLabel.classList.add("redColor", "fw-bold")
+                }
+            }
+        }
+    }
+})
 
 
 function signUpBtn() {

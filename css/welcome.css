@@ -21,7 +21,8 @@
 }
 
 .navbar-brand {
-    font-family: 'Lumanosimo', cursive;
+    /* font-family: 'Lumanosimo', cursive; */
+    font-family: 'Pacifico', cursive;
 }
 
 #logout a {

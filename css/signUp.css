@@ -26,10 +26,11 @@
 
 .navbar-brand {
     /* font-family: 'Lumanosimo', cursive; */
-    font-family: 'Russo One', sans-serif;
+    /* font-family: 'Russo One', sans-serif; */
+    font-family: 'Pacifico', cursive;
     letter-spacing: 3px;
     color: var(--mainColor);
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     pointer-events: none;
 }
